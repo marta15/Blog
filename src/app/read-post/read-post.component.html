@@ -1,0 +1,10 @@
+<div *ngIf="post" class="read-post">
+    <h2>{{post.title}}</h2>
+    <h4>{{post.date | date}}</h4>
+    <p>{{post.content}}</p>
+    <div>
+        <label for='title'>Edit title:</label>
+        <input id='title' [(ngModel)]='post.title' placeholder='title'>
+    </div>
+    <button type="button" (click)="goBack()">go back</button>
+</div>

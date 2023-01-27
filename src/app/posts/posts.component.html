@@ -1,0 +1,32 @@
+<div class="posts-main container">
+    <h2 class="display-5">All posts</h2>
+    <app-post-search></app-post-search>
+    <ul class="posts unstyled-list">
+        <li *ngFor="let post of posts">
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/slides/017.webp" alt="example image"
+                            class="img-fluid rounded-start" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.title}}</h5>
+                            <p class="card-text">
+                                <small class="text-muted">{{post.date | date}}</small>
+                            </p>
+                            <p class="card-text">
+                                {{post.content}}
+                            </p>
+
+                            <a routerLink="/blog/posts/{{post.id}}"><button type="button"
+                                    class="btn btn-primary">Read</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>

@@ -1,6 +1,6 @@
-<div id="search">
-    <label for="search-box">Search:</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+<div role="search" id="search">
+    <input #searchBox id="search-box" class="form-control" type="search" aria-label="Search" placeholder="Search posts"
+        (input)="search(searchBox.value)" />
 
     <ul class="search-result">
         <li *ngFor="let post of posts$ | async">

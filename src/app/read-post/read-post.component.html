@@ -1,10 +1,15 @@
-<div *ngIf="post" class="read-post">
-    <h2>{{post.title}}</h2>
-    <h4>{{post.date | date}}</h4>
-    <p>{{post.content}}</p>
-    <div>
-        <label for='title'>Edit title:</label>
-        <input id='title' [(ngModel)]='post.title' placeholder='title'>
+<div *ngIf="post" class="read-post container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2 class="display-5">{{post.title}}</h2>
+            <span class="badge rounded-pill bg-secondary" *ngFor="let tag of post.tags">{{tag}}</span>
+            <h4>{{post.date | date}}</h4>
+            <p>{{post.content}}</p>
+            <!-- <div>
+                <label for='title'>Edit title:</label>
+                <input id='title' [(ngModel)]='post.title' placeholder='title'>
+            </div> -->
+            <button class="btn btn-primary" type="button" (click)="goBack()">go back</button>
+        </div>
     </div>
-    <button type="button" (click)="goBack()">go back</button>
 </div>

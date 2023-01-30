@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Post } from '../post';
-import { POSTS } from '../mock-posts';
 import { PostService } from '../post.service';
 
 @Component({

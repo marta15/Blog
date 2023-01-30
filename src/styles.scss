@@ -9,9 +9,32 @@ body {
     background-color: honeydew;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Comfortaa', cursive;
+}
+
+$body-color: #404C2D;
+$body-bg: #F4ECE2;
+$link-color: #404C2D;
+$link-hover-color: #B84B19;
+
+$theme-colors: (
+    "primary": #404C2D,
+    "secondary": #902E25,
+    "light": #A2A182,
+    "muted": #E6CEBC,
+    "dark": #B84B19,
+    "info": #B84B19,
+    "danger": #811e19
+);
+
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import '@fortawesome/fontawesome-free/scss/regular.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
-
-@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

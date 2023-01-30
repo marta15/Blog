@@ -3,4 +3,5 @@ export interface Post {
     title: String;
     content: String;
     date: number;
+    tags: String[];
 }
